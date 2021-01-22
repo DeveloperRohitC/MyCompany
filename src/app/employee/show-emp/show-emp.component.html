@@ -1,0 +1,28 @@
+<br>
+<h5 class="d-flex justify-content-center">Employee</h5>
+<br>
+<br>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Employee ID</th>
+            <th>Employee Name</th>
+            <th>Department</th>
+            <th>Date Of Joining</th>
+            <th>Profile Photo</th>
+            <th>Options</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let d of employeeList">
+            <td> {{d.employeeID}} </td>
+            <td> {{d.employeeName}} </td>
+            <td> {{d.department}} </td>
+            <td> {{d.dateOfJoining | date: 'dd/MM/yyyy'}} </td>
+            <td> {{d.photoFileName}} </td>
+            <td>
+                <button type="button" class="btn-light mr-1 btn">Edit</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
